@@ -1,4 +1,4 @@
-# Open-Spending-Austria Terminology
+# Open Spending Austria Terminology
 Terminology of public finance in Austria - German / English
 
 This terminology describes public sector finance terms in Austria.
