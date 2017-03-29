@@ -11,4 +11,4 @@ This terminology describes public sector finance terms in Austria.
 * Translated by Brainstorm: http://www.brainstorm.at
 * Sponsored by Netidee: http://www.netidee.at
 * License: CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
-* Please cite "KDZ Public Finance Terminology"
+* Please cite "CC-BY-4.0: KDZ Public Finance Terminology"
