@@ -1,0 +1,1116 @@
+code,de,en
+,Post,Line item
+,Postengruppe,Line item category
+0,Anlagen,Appendices
+1,Vorräte,Supplies
+2,"Geld, Forderungen, aktive Rechnungsabgrenzung, Rücklagen","Money, receivables, active accrued income, reserves"
+3,"Verbindlichkeiten, passive Rechnungsabgrenzung","Liabilities, deferred income"
+4,Gebrauchs- und Verbrauchsgüter sowie Handelswarenverbrauch,Durable and non-durable goods and trading goods consumption
+5,Leistungen für Personal,Services for staff
+6,Sonstiger Verwaltungs- und Betriebsaufwand,Other administrative and operating expenses
+7,Sonstiger Verwaltungs- und Betriebsaufwand (Fortsetzung der Klasse 6),Other administrative and operating expenses (continued from line item category 6)
+8,Laufende Einnahmen,Current revenue
+9,Kapital- und Abschlusskonten,Capital and final accounts
+,Postenklasse,Line item subcategory
+00,Grundstücke,Properties
+01,Gebäude,Buildings
+02,Maschinen und maschinelle Anlagen,Machines and mechanical plants
+03,Werkzeuge und sonstige Erzeugungshilfsmittel,Tools and other auxiliary production means
+04,"Amts-, Betriebs- und Geschäftsausstattung","Office furniture, fixtures and equipment"
+05,Sonderanlagen,Special facilities
+06,Anlagen in Bau,Fixed assets under construction
+07,Aktivierungsfähige Rechte,Capitalisable rights
+08,Beteiligungen und Anlagewertpapiere,Holdings and investment securities
+09,nicht definiert,not defined
+10,Ersatzteile,Replacement parts
+11,Gebrauchsgüter,Consumer goods
+12,Werkstoffe,Basic materials
+13,Handelswaren,Trading goods
+14,Lebens- und Futtermittel,Food and feed
+15,Betriebsstoffe und sonstige Verbrauchsgüter,Operating materials and other consumer goods
+16,Altmaterial,Waste material
+17,Erzeugnisse,Products
+18,nicht definiert,not defined
+19,nicht definiert,not defined
+20,Kassenbestände,Cash in hand
+21,Guthaben bei Kreditinstituten,Balances held with credit institutions
+22,Wertpapiere des Umlaufvermögens,Marketable securities
+23,Forderungen aus Lieferungen und Leistungen,Trade accounts receivable
+24,Darlehen zur Investitionsförderung,Loans for investment promotion
+25,Nichtinvestitionsfördernde Darlehen,Non-investment-promoting loans
+26,nicht definiert,not defined
+27,Vorschüsse,Payment of advances
+28,Geleistete Anzahlungen und sonstige Forderungen,Advance payments made and other receivables
+29,Aktive Rechnungsabgrenzung und Rücklagen,Active accrued income and reserves
+30,nicht definiert,not defined
+31,nicht definiert,not defined
+32,nicht definiert,not defined
+33,Verbindlichkeiten aus Lieferungen und Leistungen,Trade accounts payable
+34,Investitionsdarlehen,Investment loans
+35,Aufnahmen sonstiger Finanzschulden,Borrowing of other financial liabilities
+36,Erläge,Deposits
+37,Erhaltene Anzahlungen und sonstige Verbindlichkeiten,Advance payments received and other liabilities
+38,Rückstellungen,Provisions
+39,Passive Rechnungsabgrenzungen,Deferred income
+40,"Geringwert, Wirtschaftsgüter, Materialien, Fremdbearbeitung","Low value, assets, materials, external processing"
+41,nicht definiert,not defined
+42,Werkstoffe,Basic materials
+43,Lebensmittel,Food
+44,Futtermittel,Feed
+45,Betriebsstoffe und sonstige Verbrauchsgüter,Operating materials and other consumer goods
+46,nicht definiert,not defined
+47,nicht definiert,not defined
+48,Fremdbearbeitung (Lohnarbeit),External processing (contract work)
+49,nicht definiert,not defined
+50,Geldbezüge der Beamten,Monetary remuneration of public servants
+51,Geldbezüge der Vertragsbediensteten,Monetary remuneration of contractual employees
+52,Geldbezüge der ganzjährig beschäftigten Vertragsbediensteten,Monetary remuneration of all year-round employees
+53,Sachbezüge der Beamten,Non-monetary remuneration of public servants
+54,Sachbezüge der Vertragsbediensteten,Non-monetary remuneration of contractual employees
+55,Sachbezüge der sonstigen Bediensteten,Non-monetary remuneration of other employees
+56,Nebengebühren und Geldaushilfen,Additional charges and monetary employee assistance
+57,nicht definiert,not defined
+58,Dienstgeberbeiträge,Employer's contributions
+59,Freiwillige Sozialleistungen (nur Barleistungen),Voluntary employee benefits (only cash benefits)
+60,Energiebezüge,Non-monetary remuneration in energy provided
+61,Instandhaltung,Maintenance
+62,Personen- und Gütertransporte,Passenger and freight transports
+63,Post- und Telekommunikationsdienste,Postal and telecommunications services
+64,Rechts- und Beratungskosten,Legal and consulting costs
+65,Zinsen und Geldverkehrsspesen,Interest and bank charges
+66,nicht definiert,not defined
+67,Versicherungen,Insurances
+68,Anlagenbeschreibungen,Facility descriptions
+69,Schadensfälle,Loss events
+70,Miet- und Pachtzinsen,Leasing and rental payments
+71,Öffentliche Abgaben - Ausgaben,Public fees - expenses
+72,Verschiedene Ausgaben,Various expenses
+73,nicht definiert,not defined
+74,nicht definiert,not defined
+75,nicht definiert,not defined
+75,Laufende Transferzahlungen,Current transfer payments
+76,Laufende Transferzahlungen,Current transfer payments
+77,Kapitaltransferzahlungen,Capital transfer payments
+78,Transferzahlungen an das Ausland,Transfer payments to abroad
+79,nicht definiert,not defined
+80,Einnahmen aus Veräußerungen,Revenues from disposals
+81,Einnahmen aus Leistungen,Revenues from services
+82,Sonstige Einnahmen aus wirtschaftlicher Tätigkeit,Other revenues from economic activity
+83,Eigene Steuern und Abgaben,Own taxes and duties
+84,Eigene Steuern und Abgaben,Own taxes and duties
+85,"Eigene Steuern und Abgaben, Ertragsanteil","Own taxes and duties, profit share"
+86,Laufende Transferzahlungen,Current transfer payments
+87,Kapitaltransferzahlungen,Capital transfer payments
+88,Transferzahlungen vom Ausland,Transfer payments from abroad
+89,Aktivierte Eigenleistungen und Bestandsveränderungen,Own work capitalised and changes in inventories
+90,Verrechnungskonten,Clearing accounts
+91,Verrechnungen zwischen ordentlichem und außerordentlichem Haushalt (Zuführungen bzw. Rückführungen),Settlement between ordinary and special budget (additions or returns)
+92,nicht definiert,not defined
+93,Kapitalkonto und Rücklagen,Capital account and reserves
+94,nicht definiert,not defined
+95,nicht definiert,not defined
+96,Vermögensänderungskonten,Capital accumulation accounts
+97,Eröffnungsbilanzkonto,Opening balance sheet account
+98,Abschlussbilanzkonto,Closing balance sheet account
+99,Wertberichtigungen zum Kapital,Capital value adjustments
+,Postengruppe,Line item group
+000,Bebaute Grundstücke,Developed properties
+001,Unbebaute Grundstücke,Undeveloped properties
+002,Straßenbauten,Road structures
+003,nicht definiert,not defined
+004,Wasser- und Kanalisationsbauten,Water and sewage structures
+005,nicht definiert,not defined
+006,Sonstige Grundstückseinrichtungen,Other land improvements
+007,nicht definiert,not defined
+008,nicht definiert,not defined
+009,nicht definiert,not defined
+010,Gebäude,Buildings
+011,nicht definiert,not defined
+012,nicht definiert,not defined
+013,nicht definiert,not defined
+014,nicht definiert,not defined
+015,nicht definiert,not defined
+016,nicht definiert,not defined
+017,nicht definiert,not defined
+018,nicht definiert,not defined
+019,nicht definiert,not defined
+020,Maschinen und maschinelle Anlagen,Machines and mechanical plants
+021,nicht definiert,not defined
+022,nicht definiert,not defined
+023,nicht definiert,not defined
+024,nicht definiert,not defined
+025,nicht definiert,not defined
+026,nicht definiert,not defined
+027,nicht definiert,not defined
+028,nicht definiert,not defined
+029,nicht definiert,not defined
+030,Werkzeuge und sonstige Erzeugungshilfsmittel,Tools and other auxiliary production means
+031,nicht definiert,not defined
+032,nicht definiert,not defined
+033,nicht definiert,not defined
+034,nicht definiert,not defined
+035,nicht definiert,not defined
+036,nicht definiert,not defined
+037,nicht definiert,not defined
+038,nicht definiert,not defined
+039,nicht definiert,not defined
+040,Fahrzeuge,Vehicles
+041,nicht definiert,not defined
+042,Amtsausstattung,"Office furniture, fixtures and equipment (Amtsausstattung)"
+043,Betriebsausstattung,"Office furniture, fixtures and equipment (Betriebsausstattung)"
+044,Geschäftsausstattung,"Office furniture, fixtures and equipment (Geschäftsausstattung)"
+045,nicht definiert,not defined
+046,nicht definiert,not defined
+047,nicht definiert,not defined
+048,nicht definiert,not defined
+049,nicht definiert,not defined
+050,Sonderanlagen,Special facilities
+051,nicht definiert,not defined
+052,nicht definiert,not defined
+053,nicht definiert,not defined
+054,nicht definiert,not defined
+055,nicht definiert,not defined
+056,nicht definiert,not defined
+057,nicht definiert,not defined
+058,nicht definiert,not defined
+059,nicht definiert,not defined
+060,Anlagen in Bau,Fixed assets under construction
+061,nicht definiert,not defined
+062,nicht definiert,not defined
+063,nicht definiert,not defined
+064,nicht definiert,not defined
+065,nicht definiert,not defined
+066,nicht definiert,not defined
+067,nicht definiert,not defined
+068,nicht definiert,not defined
+069,nicht definiert,not defined
+070,Aktivierungsfähige Rechte,Capitalisable rights
+071,nicht definiert,not defined
+072,nicht definiert,not defined
+073,nicht definiert,not defined
+074,nicht definiert,not defined
+075,nicht definiert,not defined
+076,nicht definiert,not defined
+077,nicht definiert,not defined
+078,nicht definiert,not defined
+079,nicht definiert,not defined
+080,Beteiligungen,Equity interests
+081,nicht definiert,not defined
+082,nicht definiert,not defined
+083,nicht definiert,not defined
+084,nicht definiert,not defined
+085,Anlagewertpapiere,Fixed-asset securities
+086,nicht definiert,not defined
+087,nicht definiert,not defined
+088,nicht definiert,not defined
+089,nicht definiert,not defined
+090,nicht definiert,not defined
+091,nicht definiert,not defined
+092,nicht definiert,not defined
+093,nicht definiert,not defined
+094,nicht definiert,not defined
+095,nicht definiert,not defined
+096,nicht definiert,not defined
+097,nicht definiert,not defined
+098,nicht definiert,not defined
+099,nicht definiert,not defined
+100,Ersatzteile,Replacement parts
+101,nicht definiert,not defined
+102,nicht definiert,not defined
+103,nicht definiert,not defined
+104,nicht definiert,not defined
+105,nicht definiert,not defined
+106,nicht definiert,not defined
+107,nicht definiert,not defined
+108,nicht definiert,not defined
+109,nicht definiert,not defined
+110,Geringwertige Wirtschaftsgüter,Low-value assets
+111,nicht definiert,not defined
+112,nicht definiert,not defined
+113,nicht definiert,not defined
+114,nicht definiert,not defined
+115,nicht definiert,not defined
+116,nicht definiert,not defined
+117,nicht definiert,not defined
+118,nicht definiert,not defined
+119,nicht definiert,not defined
+120,Werkstoffe,Basic materials
+121,nicht definiert,not defined
+122,nicht definiert,not defined
+123,nicht definiert,not defined
+124,nicht definiert,not defined
+125,nicht definiert,not defined
+126,nicht definiert,not defined
+127,nicht definiert,not defined
+128,nicht definiert,not defined
+129,nicht definiert,not defined
+130,Handelswaren,Trading goods
+131,nicht definiert,not defined
+132,nicht definiert,not defined
+133,nicht definiert,not defined
+134,nicht definiert,not defined
+135,nicht definiert,not defined
+136,nicht definiert,not defined
+137,nicht definiert,not defined
+138,nicht definiert,not defined
+139,nicht definiert,not defined
+140,Lebens- und Futtermittel,Food and feed
+141,nicht definiert,not defined
+142,nicht definiert,not defined
+143,nicht definiert,not defined
+144,nicht definiert,not defined
+145,nicht definiert,not defined
+146,nicht definiert,not defined
+147,nicht definiert,not defined
+148,nicht definiert,not defined
+149,nicht definiert,not defined
+150,Betriebsstoffe und sonstige Verbrauchsgüter,Operating materials and other consumer goods
+151,nicht definiert,not defined
+152,nicht definiert,not defined
+153,nicht definiert,not defined
+154,nicht definiert,not defined
+155,nicht definiert,not defined
+156,nicht definiert,not defined
+157,nicht definiert,not defined
+158,nicht definiert,not defined
+159,nicht definiert,not defined
+160,Altmaterial,Waste material
+161,nicht definiert,not defined
+162,nicht definiert,not defined
+163,nicht definiert,not defined
+164,nicht definiert,not defined
+165,nicht definiert,not defined
+166,nicht definiert,not defined
+167,nicht definiert,not defined
+168,nicht definiert,not defined
+169,nicht definiert,not defined
+170,Erzeugnisse,Products
+171,nicht definiert,not defined
+172,nicht definiert,not defined
+173,nicht definiert,not defined
+174,nicht definiert,not defined
+175,nicht definiert,not defined
+176,nicht definiert,not defined
+177,nicht definiert,not defined
+178,nicht definiert,not defined
+179,nicht definiert,not defined
+180,nicht definiert,not defined
+181,nicht definiert,not defined
+182,nicht definiert,not defined
+183,nicht definiert,not defined
+184,nicht definiert,not defined
+185,nicht definiert,not defined
+186,nicht definiert,not defined
+187,nicht definiert,not defined
+188,nicht definiert,not defined
+189,nicht definiert,not defined
+190,nicht definiert,not defined
+191,nicht definiert,not defined
+192,nicht definiert,not defined
+193,nicht definiert,not defined
+194,nicht definiert,not defined
+195,nicht definiert,not defined
+196,nicht definiert,not defined
+197,nicht definiert,not defined
+198,nicht definiert,not defined
+199,nicht definiert,not defined
+200,Kassenbestände,Cash in hand
+201,nicht definiert,not defined
+202,nicht definiert,not defined
+203,nicht definiert,not defined
+204,nicht definiert,not defined
+205,nicht definiert,not defined
+206,nicht definiert,not defined
+207,nicht definiert,not defined
+208,nicht definiert,not defined
+209,nicht definiert,not defined
+210,Guthaben bei Kreditinstituten,Balances held with credit institutions
+211,Guthaben bei Kreditinstituten,Balances held with credit institutions
+212,Guthaben bei Kreditinstituten,Balances held with credit institutions
+213,Guthaben bei Kreditinstituten,Balances held with credit institutions
+214,Guthaben bei Kreditinstituten,Balances held with credit institutions
+215,Guthaben bei Kreditinstituten,Balances held with credit institutions
+216,Guthaben bei Kreditinstituten,Balances held with credit institutions
+217,Guthaben bei Kreditinstituten,Balances held with credit institutions
+218,Guthaben bei Kreditinstituten,Balances held with credit institutions
+219,Guthaben bei Kreditinstituten,Balances held with credit institutions
+220,Wertpapiere des Umlaufvermögens,Marketable securities
+221,nicht definiert,not defined
+222,nicht definiert,not defined
+223,nicht definiert,not defined
+224,nicht definiert,not defined
+225,nicht definiert,not defined
+226,nicht definiert,not defined
+227,nicht definiert,not defined
+228,nicht definiert,not defined
+229,nicht definiert,not defined
+230,Forderungen aus Lieferungen und Leistungen,Trade accounts receivable
+231,nicht definiert,not defined
+232,nicht definiert,not defined
+233,nicht definiert,not defined
+234,nicht definiert,not defined
+235,nicht definiert,not defined
+236,nicht definiert,not defined
+237,nicht definiert,not defined
+238,nicht definiert,not defined
+239,nicht definiert,not defined
+240,"Darlehen zur Investitionsförderung an Bund, Bundesfonds und Bundeskammern","Loans for investment promotion to federal government, federal funds and federal chambers"
+241,"Darlehen zur Investitionsförderung an Länder, Landesfonds und Landeskammern","Loans for investment promotion to provinces, provincial funds and provincial chambers"
+242,"Darlehen zur Investitonsförderung an Gemeinden, Gemeindeverbände und -fonds","Loans for investment promotion to municipalities, municipal associations and funds"
+243,Darlehen zur Investitionsförderung an Sozialversicherungsträger,Loans for investment promotion to social security institutions
+244,Darlehen zur Investitionsförderung an sonstige Träger des öffentlichen Rechtes,Loans for investment promotion to other bodies of public law
+245,Darlehen zur Investitionsförderung an Unternehmungen (ohne Finanzunternehmungen),Loans to companies (without financial companies) for investment promotion
+246,Darlehen und Bezugsvorschüsse zur Investitonsförderung an private Haushalte,Loans and advances in pay to private households for investment promotion
+247,Darlehen zur Investitonsförderung an private Organisationen ohne Erwerbszweck,Loans to private non-profit organisations for investment promotion
+248,nicht definiert,not defined
+249,Darlehen zur Investitionsförderung an andere,Loans for investment promotion to others
+250,"Nichtinvestitionsfördernde Darlehen an Bund, Bundesfonds und Bundeskammern","Non-investment-promoting loans to federal government, federal funds and federal chambers"
+251,"Nichtinvestitionsfördernde Darlehen an Länder, Landesfonds und Landeskammern","Non-investment-promoting loans to provinces, provincial funds and provincial chambers"
+252,"Nichtinvestitionsfördernde Darlehen an Gemeinden, Gemeindeverbände und -fonds","Non-investment-promoting loans to municipalities, municipal associations and funds"
+253,Nichtinvestitionsfördernde Darlehen an Sozialversicherungsträger,Non-investment-promoting loans to social security institutions
+254,Nichtinvestitionsfördernde Darlehen an sonstige Träger des öffentlichen Rechtes,Non-investment-promoting loans to other bodies of public law
+255,Nichtinvestitonsfördernde Darlehen an Unternehmungen (ohne Finanzunternehmungen),Non-investment promoting loans to companies (without financial companies)
+256,Nichtinvestitionsfördernde Darlehen und Bezugsvorschüsse an private Haushalte,Non-investment-promoting loans and advances in pay to private households
+257,Nichtinvestitionsfördernde Darlehen an private Organisationen ohne Erwerbszweck,Non-investment-promoting loans to private non-profit organisations
+258,nicht definiert,not defined
+259,Nichtinvestitionsfördernde Darlehen an andere,Non-investment-promoting loans to others
+260,nicht definiert,not defined
+261,nicht definiert,not defined
+262,nicht definiert,not defined
+263,nicht definiert,not defined
+264,nicht definiert,not defined
+265,nicht definiert,not defined
+266,nicht definiert,not defined
+267,nicht definiert,not defined
+268,nicht definiert,not defined
+269,nicht definiert,not defined
+270,Finanzamt - Vorsteuerbeträge,Tax office - input tax amounts
+271,nicht definiert,not defined
+272,nicht definiert,not defined
+273,nicht definiert,not defined
+274,nicht definiert,not defined
+275,nicht definiert,not defined
+276,nicht definiert,not defined
+277,nicht definiert,not defined
+278,nicht definiert,not defined
+279,Sonstige Vorschüsse,Other advances
+280,Geleistete Anzahlungen,Advance payments made
+281,Geleistete Anzahlungen,Advance payments made
+282,Geleistete Anzahlungen,Advance payments made
+283,Geleistete Anzahlungen,Advance payments made
+284,Geleistete Anzahlungen,Advance payments made
+285,Geleistete Anzahlungen,Advance payments made
+286,Geleistete Anzahlungen,Advance payments made
+287,Sonstige Forderungen,Other receivables
+288,Sonstige Forderungen,Other receivables
+289,Sonstige Forderungen,Other receivables
+290,Aktive Rechnungsabgrenzung,Active accrued income and reserves
+291,nicht definiert,not defined
+292,nicht definiert,not defined
+293,nicht definiert,not defined
+294,nicht definiert,not defined
+295,nicht definiert,not defined
+296,nicht definiert,not defined
+297,nicht definiert,not defined
+298,Rücklagen,Reserves
+299,nicht definiert,not defined
+300,nicht definiert,not defined
+301,nicht definiert,not defined
+302,nicht definiert,not defined
+303,nicht definiert,not defined
+304,nicht definiert,not defined
+305,nicht definiert,not defined
+306,nicht definiert,not defined
+307,nicht definiert,not defined
+308,nicht definiert,not defined
+309,nicht definiert,not defined
+310,nicht definiert,not defined
+311,nicht definiert,not defined
+312,nicht definiert,not defined
+313,nicht definiert,not defined
+314,nicht definiert,not defined
+315,nicht definiert,not defined
+316,nicht definiert,not defined
+317,nicht definiert,not defined
+318,nicht definiert,not defined
+319,nicht definiert,not defined
+320,nicht definiert,not defined
+321,nicht definiert,not defined
+322,nicht definiert,not defined
+323,nicht definiert,not defined
+324,nicht definiert,not defined
+325,nicht definiert,not defined
+326,nicht definiert,not defined
+327,nicht definiert,not defined
+328,nicht definiert,not defined
+329,nicht definiert,not defined
+330,Verbindlichkeiten aus Lieferungen und Leistungen,Trade accounts payable
+331,nicht definiert,not defined
+332,nicht definiert,not defined
+333,nicht definiert,not defined
+334,nicht definiert,not defined
+335,nicht definiert,not defined
+336,nicht definiert,not defined
+337,nicht definiert,not defined
+338,nicht definiert,not defined
+339,nicht definiert,not defined
+340,"Investitionsdarlehen von Bund, Bundesfonds und Bundeskammern","Investment loans to federal government, federal funds and federal chambers"
+341,"Investitionsdarlehen von Ländern, Landesfonds und Landeskammern","Investments loans from provinces, provincial funds and provincial chambers"
+342,"Investitionsdarlehen von Gemeinden, Gemeindeverbänden und -fonds","Investment loans from municipalities, municipal associations and funds"
+343,Investitionsdarlehen von Sozialversicherungsträgern,Investments loans from social security institutions
+344,Investitionsdarlehen von sonstigen Trägern des öffentlichen Rechtes,Investment loans from other bodies of public law
+345,Investitionsdarlehen von Unternehmungen (ohne Finanzunternehmungen),Investment loans from companies (without financial companies)
+346,"Investitionsdarlehen von Finanzunternehmungen (Kreditinstituten, Versicherungsgesellschaften und rechtlich selbstständigen Pensionskassen)","Investment loans from financial companies (credit institutions, insurance companies and legally independent pension funds)"
+347,Investitionsdarlehen von anderen,Investment loans from others
+348,Auslandsanleihen für Investitionszwecke,Foreign bonds for investment
+349,Inlandsanleihen für Investitionszwecke,Domestic bonds for investment
+350,"Sonstige Schuldaufnahmen von Bund, Bundesfonds und Bundeskammern","Other borrowing from federal government, federal funds and federal chambers"
+351,"Sonstige Schuldaufnahmen von Ländern, Landesfonds und Landeskammern","Other borrowing from provinces, provincial funds and provincial chambers"
+352,"Sonstige Schuldaufnahmen von Gemeinden, Gemeindeverbände und -fonds","Other borrowing from municipalities, municipal associations and funds"
+353,Sonstige Schuldaufnahmen von Sozialversicherungsträgern,Other borrowing from social security institutions
+354,Sonstige Schuldaufnahmen von sonstigen Trägern des öffentlichen Rechtes,Other borrowing from other bodies of public law
+355,Sonstige Schuldaufnahmen von Unternehmungen (ohne Finanzunternehmungen),Other borrowing from companies (without financial companies)
+356,"Sonstige Schuldaufnahmen von Finanzunternehmungen (Kreditinstitutionen, Versicherungsgesellschaften und rechtlich selbstständigen Pensionskassen","Other borrowing from financial companies (credit institutions, insurance companies and legally independent pension funds)"
+357,Sonstige Schuldaufnahmen von anderen,Other borrowing from others
+358,Sonstige Auslandsanleihen,Other foreign bonds
+359,Sonstige Inlandsanleihen,Other domestic loans
+360,Verbindlichkeiten aus Steuern,Tax liabilities
+361,Erläge von/für Dienststellen der Gebietskörperschaften,Deposits of/for regional authority offices
+362,Gehaltsabzugsgebarungen,Payroll deductions management
+363,nicht definiert,not defined
+364,nicht definiert,not defined
+365,Einbehaltung und Überzahlungen von Dritten,Withholding and overpayments by third parties
+366,Stiftungen und Fonds,Foundations and funds
+367,Sonstige Erläge,Other deposits
+368,Sonstige Erläge,Other deposits
+369,nicht definiert,not defined
+370,Erhaltene Anzahlungen,Advance payments received
+371,nicht definiert,not defined
+372,nicht definiert,not defined
+373,nicht definiert,not defined
+374,nicht definiert,not defined
+375,nicht definiert,not defined
+376,nicht definiert,not defined
+377,nicht definiert,not defined
+378,nicht definiert,not defined
+379,Sonstige Verbindlichkeiten,Other liabilities
+380,Rückstellungen,Provisions
+381,nicht definiert,not defined
+382,nicht definiert,not defined
+383,nicht definiert,not defined
+384,nicht definiert,not defined
+385,nicht definiert,not defined
+386,nicht definiert,not defined
+387,nicht definiert,not defined
+388,nicht definiert,not defined
+389,nicht definiert,not defined
+390,Passive Rechnungsabgrenzungen,Deferred income
+391,nicht definiert,not defined
+392,nicht definiert,not defined
+393,nicht definiert,not defined
+394,nicht definiert,not defined
+395,nicht definiert,not defined
+396,nicht definiert,not defined
+397,nicht definiert,not defined
+398,nicht definiert,not defined
+399,nicht definiert,not defined
+400,Geringwertige Wirtschaftsgüter des Anlagevermögens,Low-value fixed assets
+401,Materialien (soweit nicht zugeordnet),Materials (if not allocated)
+402,Materialien für innerbetriebliche Leistungen,Materials for internal services
+403,Handelswaren,Trading goods
+404,nicht definiert,not defined
+405,nicht definiert,not defined
+406,nicht definiert,not defined
+407,nicht definiert,not defined
+408,nicht definiert,not defined
+409,Geringwertige Ersatzteile,Low-value replacement parts
+410,nicht definiert,not defined
+411,nicht definiert,not defined
+412,nicht definiert,not defined
+413,nicht definiert,not defined
+414,nicht definiert,not defined
+415,nicht definiert,not defined
+416,nicht definiert,not defined
+417,nicht definiert,not defined
+418,nicht definiert,not defined
+419,nicht definiert,not defined
+420,Pflanzliche Rohstoffe,Plant-based raw materials
+421,Tierische Rohstoffe,Animal-based raw materials
+422,"Mineralische Rohstoffe, soweit nicht unter 423 oder 424 fallend","Mineral raw materials, provided they do not fall under 423 or 424"
+423,Roh- und Hilfsstoffe für das Bauhauptgewerbe,Raw and auxiliary materials for the main construction trade
+424,Roh- und Hilfsstoffe für das Baunebengewerbe,Raw and auxiliary materials for the ancillary construction trade
+425,Sonstige Roh- und Hilfsstoffe,Other raw and auxiliary materials
+426,nicht definiert,not defined
+427,nicht definiert,not defined
+428,Fertig bezogene Teile,Parts purchased finished
+429,Einstellvieh,Store cattle
+430,Lebensmittel,Food
+431,nicht definiert,not defined
+432,nicht definiert,not defined
+433,nicht definiert,not defined
+434,nicht definiert,not defined
+435,nicht definiert,not defined
+436,nicht definiert,not defined
+437,nicht definiert,not defined
+438,nicht definiert,not defined
+439,nicht definiert,not defined
+440,Futtermittel,Feed
+441,nicht definiert,not defined
+442,nicht definiert,not defined
+443,nicht definiert,not defined
+444,nicht definiert,not defined
+445,nicht definiert,not defined
+446,nicht definiert,not defined
+447,nicht definiert,not defined
+448,nicht definiert,not defined
+449,nicht definiert,not defined
+450,nicht definiert,not defined
+451,Brennstoffe,Combustibles
+452,Treibstoffe,Fuels
+453,Schmier- und Schleifmittel,Lubricants and abrasives
+454,Reinigungsmittel,Cleaning detergents
+455,Chemische und sonstige artverwandte Mittel,Chemical and other related agents
+456,"Schreib-, Zeichen- und sonstige Büromittel","Writing, drawing and other office supplies"
+457,Druckwerke,Printed items
+458,Mittel zur ärztlichen Betreuung und Gesundheitsvorsorge,Medical and health care resources
+459,Sonstige Verbrauchsgüter,Other consumables
+460,nicht definiert,not defined
+461,nicht definiert,not defined
+462,nicht definiert,not defined
+463,nicht definiert,not defined
+464,nicht definiert,not defined
+465,nicht definiert,not defined
+466,nicht definiert,not defined
+467,nicht definiert,not defined
+468,nicht definiert,not defined
+469,nicht definiert,not defined
+470,nicht definiert,not defined
+471,nicht definiert,not defined
+472,nicht definiert,not defined
+473,nicht definiert,not defined
+474,nicht definiert,not defined
+475,nicht definiert,not defined
+476,nicht definiert,not defined
+477,nicht definiert,not defined
+478,nicht definiert,not defined
+479,nicht definiert,not defined
+480,Fremdbearbeitung (Lohnarbeit),External processing (contract work)
+481,nicht definiert,not defined
+482,nicht definiert,not defined
+483,nicht definiert,not defined
+484,nicht definiert,not defined
+485,nicht definiert,not defined
+486,nicht definiert,not defined
+487,nicht definiert,not defined
+488,nicht definiert,not defined
+489,nicht definiert,not defined
+490,nicht definiert,not defined
+491,nicht definiert,not defined
+492,nicht definiert,not defined
+493,nicht definiert,not defined
+494,nicht definiert,not defined
+495,nicht definiert,not defined
+496,nicht definiert,not defined
+497,nicht definiert,not defined
+498,nicht definiert,not defined
+499,nicht definiert,not defined
+500,Geldbezüge der Beamten der Verwaltung,Monetary remuneration of public servants in administration
+501,Geldbezüge der Beamten in handwerklicher Verwendung,Monetary remuneration of public servants in tradesman labour
+502,nicht definiert,not defined
+503,nicht definiert,not defined
+504,nicht definiert,not defined
+505,nicht definiert,not defined
+506,nicht definiert,not defined
+507,nicht definiert,not defined
+508,nicht definiert,not defined
+509,nicht definiert,not defined
+510,Geldbezüge der Vertragsbediensteten der Verwaltung,Monetary remuneration of contractual public servants in administration
+511,Geldbezüge der Vertragsbediensteten in handwerklicher Verwendung,Monetary remuneration of contractual public servants in tradesman labour 
+512,nicht definiert,not defined
+513,nicht definiert,not defined
+514,nicht definiert,not defined
+515,nicht definiert,not defined
+516,nicht definiert,not defined
+517,nicht definiert,not defined
+518,nicht definiert,not defined
+519,nicht definiert,not defined
+520,Geldbezüge der sonstigen Bediensteten,Monetary remuneration of other employees
+521,Geldbezüge der ganzjährig beschäftigten Arbeiter,Monetary remuneration of all year-round workers
+522,Geldbezüge der nicht ganzjährig beschäftigten Angestellten,Monetary remuneration of seasonal employees
+523,Geldbezüge der nicht ganzjährig beschäftigten Arbeiter,Monetary remuneration of seasonal workers
+524,nicht definiert,not defined
+525,nicht definiert,not defined
+526,nicht definiert,not defined
+527,nicht definiert,not defined
+528,nicht definiert,not defined
+529,nicht definiert,not defined
+530,Sachbezüge der Beamten in der Verwaltung,Non-monetary remuneration of public servants in administration
+531,Sachbezüge der Beamten in handwerklicher Verwendung,Non-monetary remuneration of public servants in tradesman labour
+532,nicht definiert,not defined
+533,nicht definiert,not defined
+534,nicht definiert,not defined
+535,nicht definiert,not defined
+536,nicht definiert,not defined
+537,nicht definiert,not defined
+538,nicht definiert,not defined
+539,nicht definiert,not defined
+540,Sachbezüge der Vertragsbediensteten der Verwaltung,Non-monetary remuneration of contractual employees in administration
+541,Sachbezüge der Vertragsbediensteten in handwerklicher Verwendung,Monetary remuneration of public servants in tradesman labour
+542,nicht definiert,not defined
+543,nicht definiert,not defined
+544,nicht definiert,not defined
+545,nicht definiert,not defined
+546,nicht definiert,not defined
+547,nicht definiert,not defined
+548,nicht definiert,not defined
+549,nicht definiert,not defined
+550,Sachbezüge der ganzjährig beschäftigten Angestellten,Non-monetary remuneration of all year-round employees
+551,Sachbezüge der ganzjährig beschäftigten Arbeiter,Non-monetary remuneration of all year-round workers
+552,Sachbezüge der nicht ganzjährig beschäftigten Angestellten,Non-monetary remuneration of seasonal employees
+553,Sachbezüge der nicht ganzjährig beschäftigen Arbeiter,Non-monetary remuneration of seasonal workers
+554,nicht definiert,not defined
+555,nicht definiert,not defined
+556,nicht definiert,not defined
+557,nicht definiert,not defined
+558,nicht definiert,not defined
+559,nicht definiert,not defined
+560,Reisegebühren,Travel charges
+561,nicht definiert,not defined
+562,nicht definiert,not defined
+563,Sonstige Aufwandsentschädigungen,Other reimbursement of expenses
+564,Vergütungen für Nebentätigkeit,Remuneration of secondary employment
+565,Mehrleistungsvergütungen,Remuneration of additional services
+566,Zuwendung aus Anlass von Dienstjubiläen,Employment anniversary allowance
+567,Belohnungen und Geldaushilfen,Rewards and monetary employee assistance
+568,nicht definiert,not defined
+569,Sonstige Nebengebühren,Other additional charges
+570,nicht definiert,not defined
+571,nicht definiert,not defined
+572,nicht definiert,not defined
+573,nicht definiert,not defined
+574,nicht definiert,not defined
+575,nicht definiert,not defined
+576,nicht definiert,not defined
+577,nicht definiert,not defined
+578,nicht definiert,not defined
+579,nicht definiert,not defined
+580,Dienstgeberbeiträge zum Ausgleichsfonds für Familienbeihilfen,Employer's contributions to equalisation account for family allowances
+581,Sonstige Dienstgeberbeiträge zur sozialen Sicherheit,Other employer's contributions to social security
+582,Leistungen aus der Selbstträgerschaft (soweit gesondert ausgewiesen),Benefits from the self-payment regime (if separately stated)
+583,nicht definiert,not defined
+584,nicht definiert,not defined
+585,nicht definiert,not defined
+586,nicht definiert,not defined
+587,nicht definiert,not defined
+588,nicht definiert,not defined
+589,nicht definiert,not defined
+590,Freiwillige Sozialleistungen (nur Barleistungen),Voluntary employee benefits (only cash benefits)
+591,nicht definiert,not defined
+592,nicht definiert,not defined
+593,nicht definiert,not defined
+594,nicht definiert,not defined
+595,nicht definiert,not defined
+596,nicht definiert,not defined
+597,nicht definiert,not defined
+598,nicht definiert,not defined
+599,nicht definiert,not defined
+600,Strom,Electricity
+601,Gas,Gas
+602,Wasser,Water
+603,Wärme,Heat
+604,nicht definiert,not defined
+605,nicht definiert,not defined
+606,nicht definiert,not defined
+607,nicht definiert,not defined
+608,nicht definiert,not defined
+609,nicht definiert,not defined
+610,Instandhaltung von Grund und Boden,Maintenance of land and property
+611,Instandhaltung von Straßenbauten,Maintenance of road structures
+612,Instandhaltung von Wasser- und Kanalisationsanlagen,Maintenance of water and sewerage facilities
+613,Instandhaltung von sonstigen Grundstückseinrichtungen,Maintenance of other property facilities
+614,Instandhaltung von Gebäuden,Maintenance of buildings
+615,nicht definiert,not defined
+616,Instandhaltung von Maschinen und maschinellen Anlagen,Maintenance of machinery and mechanical equipment
+617,Instandhaltung von Fahrzeugen,Maintenance of vehicles
+618,Instandhaltung von sonstigen Anlagen,Maintenance of other facilities
+619,Instandhaltung von Sonderanlagen,Maintenance of special facilities
+620,Personen- und Gütertransporte,Passenger and freight transports
+621,nicht definiert,not defined
+622,nicht definiert,not defined
+623,nicht definiert,not defined
+624,nicht definiert,not defined
+625,nicht definiert,not defined
+626,nicht definiert,not defined
+627,nicht definiert,not defined
+628,nicht definiert,not defined
+629,nicht definiert,not defined
+630,Postdienste,Postal services
+631,Telekommunikationsdienste,Telecommunication services
+632,nicht definiert,not defined
+633,nicht definiert,not defined
+634,nicht definiert,not defined
+635,nicht definiert,not defined
+636,nicht definiert,not defined
+637,nicht definiert,not defined
+638,nicht definiert,not defined
+639,nicht definiert,not defined
+640,Rechtskosten,Legal costs
+641,Prüfungskosten,Audit fees
+642,Beratungskosten,Consulting costs
+643,nicht definiert,not defined
+644,nicht definiert,not defined
+645,nicht definiert,not defined
+646,nicht definiert,not defined
+647,nicht definiert,not defined
+648,nicht definiert,not defined
+649,nicht definiert,not defined
+650,Zinsen für Finanzschulden - Inland,Interest on financial liabilities - domestic
+651,Zinsen für Finanzschulden - Inland,Interest on financial liabilities - domestic
+652,Sonstige Zinsen - Inland,Other interest - domestic
+653,Zinsen für Finanzschulden - Ausland,Interest on financial liabilities - abroad
+654,Zinsen für Finanzschulden - Ausland,Interest on financial liabilities - abroad
+655,Sonstige Zinsen - Ausland,Other interest - abroad
+656,Skontoaufwand,Cash discount expenses
+657,Geldverkehrsspesen,Bank charges
+658,nicht definiert,not defined
+659,nicht definiert,not defined
+660,nicht definiert,not defined
+661,nicht definiert,not defined
+662,nicht definiert,not defined
+663,nicht definiert,not defined
+664,nicht definiert,not defined
+665,nicht definiert,not defined
+666,nicht definiert,not defined
+667,nicht definiert,not defined
+668,nicht definiert,not defined
+669,nicht definiert,not defined
+670,Versicherungen,Insurances
+671,nicht definiert,not defined
+672,nicht definiert,not defined
+673,nicht definiert,not defined
+674,nicht definiert,not defined
+675,nicht definiert,not defined
+676,nicht definiert,not defined
+677,nicht definiert,not defined
+678,nicht definiert,not defined
+679,nicht definiert,not defined
+680,Anlageabschreibungen,Depreciation of assets
+681,nicht definiert,not defined
+682,nicht definiert,not defined
+683,nicht definiert,not defined
+684,nicht definiert,not defined
+685,nicht definiert,not defined
+686,nicht definiert,not defined
+687,nicht definiert,not defined
+688,nicht definiert,not defined
+689,nicht definiert,not defined
+690,Schadensfälle,Loss events
+691,nicht definiert,not defined
+692,nicht definiert,not defined
+693,nicht definiert,not defined
+694,nicht definiert,not defined
+695,nicht definiert,not defined
+696,nicht definiert,not defined
+697,nicht definiert,not defined
+698,nicht definiert,not defined
+699,nicht definiert,not defined
+700,Mietzinse,Rent payments
+701,Pachtzinse,Lease payments
+702,Ausgaben für Finanzierungsleasing,Finance leasing expenditure
+703,nicht definiert,not defined
+704,nicht definiert,not defined
+705,nicht definiert,not defined
+706,nicht definiert,not defined
+707,nicht definiert,not defined
+708,nicht definiert,not defined
+709,nicht definiert,not defined
+710,"Öffentliche Abgaben (Ausgaben), ohne Gebühren gemäß FAG","Public fees (expenditure), without charges under the Fiscal Equalization Act (FAG)"
+711,Gebühren für die Benützung von Gemeindeeinrichtungen und -anlagen gemäß FAG (Ausgaben),"Charges for the use of municipal institutions and facilities under the Fiscal Equalization Act, FAG (expenditure)"
+712,nicht definiert,not defined
+713,nicht definiert,not defined
+714,nicht definiert,not defined
+715,nicht definiert,not defined
+716,nicht definiert,not defined
+717,nicht definiert,not defined
+718,nicht definiert,not defined
+719,nicht definiert,not defined
+720,Kostenbeiträge (Kostenersätze) für Leistungen,Cost contributions (reimbursements) for services
+721,Bezüge der gewählten Organe,Remuneration of elected representative bodies
+722,Rückersätze von Einnahmen,Income reimbursements
+723,Amtspauschalien und Repräsentationsausgaben,Administrative lump sums and entertainment expenses
+724,nicht definiert,not defined
+725,Bibliothekserfordernisse,Library requirements
+726,Mitgliedsbeiträge an Institutionen (im Inland),Member fees to institutions (domestic)
+727,nicht definiert,not defined
+728,Entgelte für sonstige Leistungen,Fees for other services
+729,Sonstige Ausgaben,Other expenses
+730,nicht definiert,not defined
+731,nicht definiert,not defined
+732,nicht definiert,not defined
+733,nicht definiert,not defined
+734,nicht definiert,not defined
+735,nicht definiert,not defined
+736,nicht definiert,not defined
+737,nicht definiert,not defined
+738,nicht definiert,not defined
+739,nicht definiert,not defined
+740,nicht definiert,not defined
+741,nicht definiert,not defined
+742,nicht definiert,not defined
+743,nicht definiert,not defined
+744,nicht definiert,not defined
+745,nicht definiert,not defined
+746,nicht definiert,not defined
+747,nicht definiert,not defined
+748,nicht definiert,not defined
+749,nicht definiert,not defined
+750,"Laufende Transferzahlungen an Bund, Bundesfonds und Bundeskammern","Current transfer payments to federal government, federal funds and federal chambers"
+751,"Laufende Transferzahlungen an Länder, Landesfonds und Landeskammern","Current transfer payments to provinces, provincial funds and provincial chambers"
+752,"Laufende Transferzahlungen an Gemeinden, Gemeindeverbände und -fonds","Current transfer payments to municipalities, municipal associations and funds"
+753,Laufende Transferzahlungen an Sozialversicherungsträger,Current transfer payments to social security institutions
+754,Laufende Transferzahlungen an sonstige Träger des öffentlichen Rechtes,Current transfer payments to other bodies of public law
+755,Laufende Transferzahlungen an Unternehmungen (ohne Finanzunternehmungen),Current transfer payments to companies (without financial companies)
+756,"Laufende Transferzahlungen an Finanzunternehmungen (Kreditinstitute, Versicherungsgesellschaften und rechtlich selbstständige Pensionskassen)","Current transfer payments to financial companies (credit institutions, insurance companies and legally independent pension funds)"
+757,Laufende Transferzahlungen an private Organisationen ohne Erwerbszweck,Current transfer payments to private non-profit organisations
+758,nicht definiert,not defined
+759,Laufende Transferzahlungen an netto-veranschlagte Unternehmungen,Current transfer payments to own net-valued companies
+760,Pensionen und sonstige Ruhebezüge (einschließlich Dienstgeberbeiträge),Pensions and other retirement pensions (including employer's contributions)
+761,nicht definiert,not defined
+762,nicht definiert,not defined
+763,nicht definiert,not defined
+764,Entschädigungen,Indemnities
+765,nicht definiert,not defined
+766,nicht definiert,not defined
+767,nicht definiert,not defined
+768,Sonstige laufende Transferzahlungen an private Haushalte,Other current transfer payments to private households
+769,Gewinnentnahmen der Gemeinde von Unternehmungen und marktbestimmten Betrieben der Gemeinde (Abschnitte 85 bis 89),Municipal profit withdrawals from companies and municipal entities classified as market producers (Sections 85 to 89)
+770,"Kapitaltransferzahlungen an Bund, Bundesfonds und Bundeskammern","Capital transfer payments to federal government, federal funds and federal chambers"
+771,"Kapitaltransferzahlungen an Länder, Landesfonds und Landeskammern","Capital transfer payments to provinces, provincial funds and provincial chambers"
+772,"Kapitaltransferzahlungen an Gemeinden, Gemeindeverbände und -fonds","Capital transfer payments to municipalities, municipal associations and funds"
+773,Kapitaltransferzahlungen an Sozialversicherungsträger,Capital transfer payments to social insurance institutions
+774,Kapitaltransferzahlungen an sonstige Träger des öffentlichen Rechtes,Capital transfer payments to other bodies of public law
+775,Kapitaltransferzahlungen an Unternehmungen (ohne Finanzunternehmungen),Capital transfer payments to companies (without financial companies)
+776,"Kapitaltransferzahlungen an Finanzunternehmungen (Kreditinstitute, Versicherungsgesellschaften und rechtlich selbstständige Pensionskassen)","Capital transfer payments to financial companies (credit institutions, insurance companies and legally independent pension funds)"
+777,Kapitaltransferzahlungen an private Organisationen ohne Erwerbszweck,Capital transfer payments to private non-profit organisations
+778,Kapitaltransferzahlungen an private Haushalte,Capital transfer payments to private households
+779,Investitions- und Tilgungszuschüsse zwischen Unternehmungen und marktbestimmten Betrieben der Gemeinde (Abschnitte 85 bis 89) und der Gemeinde,Investment grants and repayment bonuses between companies and municipal entities classified as market producers (Sections 85 to 89) and the municipality
+780,Laufende Transferzahlungen an das Ausland,Current transfer payments to abroad
+781,Kapitaltransferzahlungen an das Ausland,Capital transfer payments to abroad
+782,nicht definiert,not defined
+783,nicht definiert,not defined
+784,nicht definiert,not defined
+785,Kapitaltransferzahlungen an das Ausland,Capital transfer payments to abroad
+786,nicht definiert,not defined
+787,nicht definiert,not defined
+788,nicht definiert,not defined
+789,nicht definiert,not defined
+790,nicht definiert,not defined
+791,nicht definiert,not defined
+792,nicht definiert,not defined
+793,nicht definiert,not defined
+794,nicht definiert,not defined
+795,nicht definiert,not defined
+796,nicht definiert,not defined
+797,nicht definiert,not defined
+798,nicht definiert,not defined
+799,nicht definiert,not defined
+800,Veräußerungen  von geringwertigen Ersatzteilen,Disposals of low-value replacement parts
+801,nicht definiert,not defined
+802,Veräußerungen von bezogenen Werkstoffen,Disposal of basic materials purchased
+803,Veräußerungen von Handelswaren,Disposal of trading goods
+804,Veräußerungen von bezogenen Lebens- und Futtermitteln,Disposal of food and feed purchased
+805,Veräußerungen von bezogenen Betriebsstoffen und sonstigen Verbrauchsgütern,Disposal of operating materials and other consumer goods purchased
+806,Veräußerungen von Altmaterial,Disposals of waste materials
+807,Veräußerungen von Erzeugnissen,Disposals of products
+808,Veräußerungen von geringwertigen Wirtschaftsgütern des Anlagevermögens (Gebrauchsgütern),Disposals of low-value fixed assets (consumer goods)
+809,Gegenwerte von Sachbezugsleistungen,Equivalent values of non-monetary remuneration
+810,Leistungserlöse,Service revenues
+811,nicht definiert,not defined
+812,nicht definiert,not defined
+813,Nebenerlöse,Incidental revenues
+814,Nachträgliche Einnahmen für erbrachte Leistungen und Einnahmen aus rückgezahlten Ausgaben für Leistungen Dritter,Subsequent revenues for services provided and revenue from reimbursed expenses for third-party services
+815,Gebühren für sonstige Leistungen,Charges for other services
+816,nicht definiert,not defined
+817,Kostenbeiträge (Kostenersätze) für sonstige Leistungen,Cost contributions (reimbursements) for other services
+818,nicht definiert,not defined
+819,Abschreibungen von Wertberichtigungen zu Schulden,Write-down of debt value adjustments
+820,Einnahmen aus der Verzinsung von Darlehen und Wertpapieren,Revenue from interest on loans and securities
+821,nicht definiert,not defined
+822,Dividenden und Gewinnanteile von Unternehmungen (soweit nicht bei Post 869 oder 879 ausgewiesen),Company dividends and share of profits (unless stated in item 869 or 879)
+823,Zinsen,Interest
+824,Einnahmen aus der Vermietung und Verpachtung von Sachen sowie aus Dienstbarkeiten und Baurecht,Revenues generated from the letting and leasing of items as well as from easements and construction law
+825,Einnahmen aus der Untervermietung und Unterverpachtung von (an)gemieteten Sachen,Revenue generated from the subletting or sublease of rented items
+826,nicht definiert,not defined
+827,Kostenersätze für die Überlassung von Bediensteten an Dritte,Cost contributions for the secondment of employees to third parties
+828,Rückersätze von Ausgaben,Expense reimbursements
+829,Sonstige Einnahmen,Other revenues
+830,Grundsteuer von den land- und forstwirtschaftlichen Betrieben,Property tax from farms and forestry holdings
+831,Grundsteuer von den Grundstücken,Property tax from the properties
+832,Gewerbesteuer nach Ertrag und Kapital,Trade tax according to income and capital
+833,Kommunalsteuer,Municipal tax
+834,Fremdenverkehrsabgaben,Tourist fees
+835,Abgaben von Anzeigen in Zeitungen oder sonstigen Druckwerken,Taxes on ads in newspapers or other publications
+836,Abgaben auf die Veräußerung von Getränken und Speiseeis,Taxes on the sale of beverages and ice cream
+837,Lustbarkeitsabgaben (Vergnügungssteuern) ohne Zweckwidmung des Ertrages,Entertainment taxes without appropriation of revenue
+838,Abgaben für das Halten von Tieren,Dog fees
+839,Abgaben von freiwilligen Feilbietungen,Fees for real estate auctions
+840,Abgabe von Ankündigungen,Announcement fees
+841,Abgaben für den Gebrauch von öffentlichem Grund in den Gemeinden und des darüber befindlichen Luftraumes,Fees for the use of public municipal property and the superjacent airspace
+842,Sonstige Abgaben aufgrund des Steuerfindungsrechtes der Länder,Other fees due to provincial autonomous tax authority
+843,Sonstige Abgaben aufgrund des Steuerfindungsrechtes der Länder,Other fees due to provincial autonomous tax authority
+844,Sonstige Abgaben aufgrund des Steuerfindungsrechtes der Länder,Other fees due to provincial autonomous tax authority
+845,Sonstige Abgaben aufgrund des Steuerfindungsrechtes der Länder,Other fees due to provincial autonomous tax authority
+846,Sonstige Abgaben aufgrund des Steuerfindungsrechtes der Länder,Other fees due to provincial autonomous tax authority
+847,Sonstige Abgaben aufgrund des Steuerfindungsrechtes der Länder,Other fees due to provincial autonomous tax authority
+848,Sonstige Abgaben aufgrund des Steuerfindungsrechtes der Länder,Other fees due to provincial autonomous tax authority
+849,Nebenansprüche,Secondary claims
+850,Interessentenbeiträge von Grundstückseigentümern und Anrainern,Interested party contributions by property owners and neighbours
+851,nicht definiert,not defined
+852,Gebühren für die Benützung von Gemeindeeinrichtungen und -anlagen,Charges for the use of municipal institutions and facilities
+853,Jagd- und Fischereiabgaben (Gemeindeanteile),Hunting and fishing taxes (municipality's share)
+854,Sonstige Abgaben aufgrund des Steuerfindungsrechtes der Länder (Fortsetzung),Other taxes due to provincial autonomous tax authority (cont.)
+855,Sonstige Abgaben aufgrund des Steuerfindungsrechtes der Länder (Fortsetzung),Other taxes due to provincial autonomous tax authority (cont.)
+856,Verwaltungsabgaben,Administrative fees
+857,Kommissionsgebühren,Commission charges
+858,Ertragsanteile an der Spielbankabgabe,Profit shares in casino tax
+859,Ertragsanteile ohne Spielbankabgabe,Profit shares without casino tax
+860,"Laufende Transferzahlungen von Bund, Bundesfonds und Bundeskammern","Capital transfer payments from federal government, federal funds and federal chambers"
+861,"Laufende Transferzahlungen von Ländern, Landesfonds und Landeskammern","Capital transfer payments from provinces, provincial funds and provincial chambers"
+862,"Laufende Transferzahlungen von Gemeinden, Gemeindeverbänden und -fonds","Current transfer payments from municipalities, municipal associations and funds"
+863,Laufende Transferzahlungen von Sozialversicherungsträgern,Current transfer payments from social security institutions
+864,Laufende Transferzahlungen von sonstigen Trägern des öffentlichen Rechtes,Current transfer payments from other bodies of public law
+865,Laufende Transferzahlungen von Unternehmungen (ohne Finanzunternehmungen),Current transfer payments from companies (without financial companies)
+866,"Laufende Transferzahlungen von Finanzunternehmungen (Kreditinstituten, Versicherungsgesellschaften und rechtlich selbstständigen Pensionskassen)","Current transfer payments from financial companies (credit institutions, insurance companies and legally independent pension funds)"
+867,Laufende Transferzahlungen von privaten Organisationen ohne Erwerbszweck,Current transfer payments from private non-profit organisations
+868,Laufende Transferzahlungen von privaten Haushalten,Current transfer payments from private households
+869,Gewinnentnahmen der Gemeinde von Unternehmungen und marktbestimmten Betrieben der Gemeinde (Abschnitte 85 bis 89),Municipal profit withdrawals from companies and municipal entities classified as market producers (Sections 85 to 89)
+870,"Kapitaltransferzahlungen von Bund, Bundesfonds und Bundeskammern","Capital transfer payments from federal government, federal funds and federal chambers"
+871,"Kapitaltransferzahlungen von Ländern, Landesfonds und Landeskammern","Capital transfer payments from provinces, provincial funds and provincial chambers"
+872,"Kapitaltransferzahlungen von Gemeinden, Gemeindeverbänden und -fonds","Capital transfer payments from municipalities, municipal associations and funds"
+873,Kapitaltransferzahlungen von Sozialversicherungsträgern,Capital transfer payments from social security institutions
+874,Kapitaltransferzahlungen von sonstigen Trägern des öffentlichen Rechtes,Capital transfer payments from other bodies of public law
+875,Kapitaltransferzahlungen von Unternehmungen (ohne Finanzunternehmungen),Capital transfer payments from companies (without financial companies)
+876,"Kapitaltransferzahlungen von Finanzunternehmungen (Kreditinstituten, Versicherungsgesellschaften und rechtlich selbstständigen Pensionskassen)","Capital transfer payments from financing companies (credit institutions, insurance companies and legally independent pension funds)"
+877,Kapitaltransferzahlungen von privaten Organisationen ohne Erwerbszweck,Capital transfer payments from private non-profit organisations
+878,Kapitaltransferzahlungen von privaten Haushalten,Capital transfer payments from private households
+879,Investitions- und Tilgungszuschüsse zwischen Unternehmungen und marktbestimmten Betrieben der Gemeinde (Abschnitte 85 bis 89) und der Gemeinde,Investment grants and repayment bonuses between companies and municipal entities classified as market producers (Sections 85 to 89) and the municipality
+880,Laufende Transferzahlungen vom Ausland,Current transfer payments from abroad
+881,nicht definiert,not defined
+882,nicht definiert,not defined
+883,nicht definiert,not defined
+884,nicht definiert,not defined
+885,Kapitaltransferzahlungen vom Ausland,Capital transfer payments from abroad
+886,nicht definiert,not defined
+887,nicht definiert,not defined
+888,Laufende Transferzahlungen von der Europäischen Union,Current transfer payments from the European Union
+889,Kapitaltransferzahlungen von der Europäischen Union,Capital transfer payments from the European Union
+890,Aktivierte Eigenleistungen,Own work capitalised
+891,Bestandsveränderungen an Erzeugnissen,Changes in inventories - goods
+892,Bestandsveränderungen am Anlagevermögen,Changes in inventories - fixed assets
+893,Bestandsveränderungen am Umlaufvermögen,Changes in inventories - current assets
+894,nicht definiert,not defined
+895,nicht definiert,not defined
+896,nicht definiert,not defined
+897,nicht definiert,not defined
+898,nicht definiert,not defined
+899,Sammelertragskonto,Summary revenue account
+900,nicht definiert,not defined
+901,nicht definiert,not defined
+902,nicht definiert,not defined
+903,nicht definiert,not defined
+904,nicht definiert,not defined
+905,nicht definiert,not defined
+906,nicht definiert,not defined
+907,nicht definiert,not defined
+908,nicht definiert,not defined
+909,nicht definiert,not defined
+910,Verrechnung zwischen ordentlichem und außerordentlichem Haushalt (Zuführungen bzw. Rückführungen),Settlement between ordinary and special budget (additions or returns)
+911,nicht definiert,not defined
+912,nicht definiert,not defined
+913,nicht definiert,not defined
+914,nicht definiert,not defined
+915,nicht definiert,not defined
+916,nicht definiert,not defined
+917,nicht definiert,not defined
+918,nicht definiert,not defined
+919,nicht definiert,not defined
+920,nicht definiert,not defined
+921,nicht definiert,not defined
+922,nicht definiert,not defined
+923,nicht definiert,not defined
+924,nicht definiert,not defined
+925,nicht definiert,not defined
+926,nicht definiert,not defined
+927,nicht definiert,not defined
+928,nicht definiert,not defined
+929,nicht definiert,not defined
+930,Kapitalkonto und Rücklagen,Capital account and reserves
+931,nicht definiert,not defined
+932,nicht definiert,not defined
+933,nicht definiert,not defined
+934,nicht definiert,not defined
+935,nicht definiert,not defined
+936,nicht definiert,not defined
+937,nicht definiert,not defined
+938,nicht definiert,not defined
+939,Rücklagen,Reserves
+940,nicht definiert,not defined
+941,nicht definiert,not defined
+942,nicht definiert,not defined
+943,nicht definiert,not defined
+944,nicht definiert,not defined
+945,nicht definiert,not defined
+946,nicht definiert,not defined
+947,nicht definiert,not defined
+948,nicht definiert,not defined
+949,nicht definiert,not defined
+950,nicht definiert,not defined
+951,nicht definiert,not defined
+952,nicht definiert,not defined
+953,nicht definiert,not defined
+954,nicht definiert,not defined
+955,nicht definiert,not defined
+956,nicht definiert,not defined
+957,nicht definiert,not defined
+958,nicht definiert,not defined
+959,nicht definiert,not defined
+960,Gewinn- und Verlustkonto,Profit and loss statement
+961,Abwicklung Ist-Überschüsse Vorjahr[e],Settlement of actual surplus in previous year/s
+962,Abwicklung Ist-Überschüsse Vorjahr[e],Settlement of actual surplus in previous year/s
+963,Abwicklung Soll-Überschüsse Vorjahr[e],Settlement of target surplus in previous year/s
+964,Abwicklung Soll-Abgänge Vorjahr[e],Settlement of target disposals in previous year/s
+965,Abwicklung des Ist-Überschusses laufendes Jahr,Settlement of current year's actual surplus
+966,Abwicklung des Ist-Abganges laufendes Jahr,Settlement of current year's actual disposal
+967,Abwicklung des Soll-Überschusses laufendes Jahr,Settlement of current year's target surplus
+968,Abwicklung des Soll-Abganges laufendes Jahr,Settlement of current year's target disposal
+969,nicht definiert,not defined
+970,nicht definiert,not defined
+971,nicht definiert,not defined
+972,nicht definiert,not defined
+973,nicht definiert,not defined
+974,nicht definiert,not defined
+975,nicht definiert,not defined
+976,nicht definiert,not defined
+977,nicht definiert,not defined
+978,nicht definiert,not defined
+979,nicht definiert,not defined
+980,nicht definiert,not defined
+981,nicht definiert,not defined
+982,nicht definiert,not defined
+983,nicht definiert,not defined
+984,nicht definiert,not defined
+985,nicht definiert,not defined
+986,nicht definiert,not defined
+987,nicht definiert,not defined
+988,nicht definiert,not defined
+989,nicht definiert,not defined
+990,nicht definiert,not defined
+991,nicht definiert,not defined
+992,nicht definiert,not defined
+993,nicht definiert,not defined
+994,nicht definiert,not defined
+995,nicht definiert,not defined
+996,nicht definiert,not defined
+997,nicht definiert,not defined
+998,nicht definiert,not defined
+999,nicht definiert,not defined
