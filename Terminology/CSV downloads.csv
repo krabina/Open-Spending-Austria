@@ -1,0 +1,31 @@
+column,de,en
+gkz,Gemeindekennziffer,Municipality identifier
+jahr,Jahr,Year
+haushaltskonto-hinweis,Haushaltshinweis. Gliedert nach haushaltswirtschaftlichen Gesichtspunkten (ordentlicher Haushalt = laufende Gebarung) ,Household account note. Structures according to budgetary aspects (ordinary budget = current conduct)
+haushaltskonto-hinweis-name,"Bezeichnung des Haushaltskonto-Hinweises 
+Ordentliche Ausgaben
+Ordentliche Einnahmen
+Außerordentliche Ausgaben
+Außerordentliche Einnahmen","Name of household account note
+Ordinary expenditures
+Ordinary revenues
+Extraordinary expenditures
+Extraordinary revenues"
+haushaltskonto-ansatz,Nummer des Ansatzes. Der Ansatz gliedert nach funktionellen Gesichtspunkten (Aufgabenbereiche),Number of area. The area structures according to functional aspects (areas of responsibility)
+ansatzbezeichnung,Bezeichnung des Ansatzes,Name of area
+haushaltskonto-post,Nummer der Post. Gliedert die Einnahmen und Ausgaben nach ökonomischen Gesichtspunkten (Ausgabenarten),Number of item. Structures revenues and expenditures according to economic aspects (type of expenditures)
+kontenbezeichnung,Bezeichnung der Post,Name of item
+haushaltskonto-sonstige-untergliederung,Sonstige Untergliederung (optional),Other subclassification (optional)
+kennzeichen-fuer-verguetungen,"Entgelte für tatsächlich erbrachte Leistungen von wirtschaftlichen Unternehmungen, für die keine eigenen Wirtschaftspläne aufgestellt werden, Betrieben und betriebsähnlichen Einrichtungen
+0 = keine Vergütung
+1= Vergütung","Compensations for services actually provided by business companies (for which no separate business plans are made) and by businesses and quasi companies
+0 = no remuneration
+1= remuneration"
+anfaengliche-reste-rj,anfängliche Zahlungsrückstände (Einnahmen- und Ausgabenreste aus dem Vorjahr) in EUR,Initial payment arrears (outstanding revenues and expenditures from the previous year) in EUR
+soll-rj ,geplante Beträge (Soll) in EUR,Planned amounts (target) in EUR
+ist-rj,tatsächliche Beträge (Ist) in EUR,Actual amounts (actual) in EUR
+voranschlag-rj,Voranschlagswert in EUR (für das nächste Jahr),Approved budget value in EUR (for the coming year)
+mittelfristige-finanzplanung-soll-folgejahr+1,Mittelfristige Finanzplanung - Soll Voranschlagsjahr+1 in EUR,Medium-term financial planning - target budget year+1 in EUR
+mittelfristige-finanzplanung-soll-folgejahr+2,Mittelfristige Finanzplanung - Soll Voranschlagsjahr+2 in EUR,Medium-term financial planning - target budget year+2 in EUR
+mittelfristige-finanzplanung-soll-folgejahr+3,Mittelfristige Finanzplanung - Soll Voranschlagsjahr+3 in EUR,Medium-term financial planning - target budget year+3 in EUR
+mittelfristige-finanzplanung-soll-folgejahr+4,Mittelfristige Finanzplanung - Soll Voranschlagsjahr+4 in EUR,Medium-term financial planning - target budget year+4 in EUR
