@@ -6,3 +6,6 @@ This repository was created for the project **data.offenerhaushalt.at**. It was 
 
 * under "Terminology" we published a vocabulary for public spending in Austria in (German, Englisch)
 * under "scr" the source code can be found created during the project. Please note that this is NOT a repository for the whole project Offenerhaushalt.at but only for the above mentioned parts. 
+
+License: CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Please cite "CC-BY-4.0: KDZ Public Finance Terminology"
