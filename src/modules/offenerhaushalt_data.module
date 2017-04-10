@@ -1,0 +1,999 @@
+<?php
+
+define('OFFENERHAUSHALT_DATA_SRC_STA', 'STA');
+define('OFFENERHAUSHALT_DATA_SRC_GEM', 'GEM');
+
+define('OFFENERHAUSHALT_DATA_TYPE_RA', 'RA');
+define('OFFENERHAUSHALT_DATA_TYPE_VA', 'VA');
+
+define('OFFENERHAUSHALT_DATA_ROLE_REGISTERED','oh_data_registered');
+define('OFFENERHAUSHALT_DATA_ROLE_PREMIUM',   'oh_data_premium');
+define('OFFENERHAUSHALT_DATA_ROLE_ALLACCESS', 'oh_data_allaccess');
+
+define('OFFENERHAUSHALT_DATA_ACCESS_ANONYMOUS' ,3);
+define('OFFENERHAUSHALT_DATA_ACCESS_REGISTERED',2);
+define('OFFENERHAUSHALT_DATA_ACCESS_PREMIUM'   ,1);
+
+/**
+ * Hook Menu
+ *
+ * @return array
+ */
+function offenerhaushalt_data_menu() {
+    $items = [];
+
+    $items['data'] = array(
+        'title' => 'data.offenerhaushalt.at',
+        'page callback' => 'offenerhaushalt_data_controller',
+        'page arguments' => array(),
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['data/query'] = array(
+        'title' => 'query',
+        'page callback' => 'offenerhaushalt_data_query',
+        'page arguments' => array(),
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['data/account-request/submit'] = array(
+        'title' => 'Data Account Submit',
+        'page callback' => 'offenerhaushalt_data_account_request_submit',
+        'page arguments' => array(),
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['data/account-request'] = array(
+        'title' => 'Account Anfrage',
+        'page callback' => 'offenerhaushalt_data_account_request',
+        'page arguments' => array(),
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['data/batch-init'] = array(
+        'title' => 'batch init',
+        'page callback' => 'offenerhaushalt_data_query_batch_init',
+        'page arguments' => array(),
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['data/batch-finished/%'] = array(
+        'title' => 'data.offenerhaushalt',
+        'page callback' => 'offenerhaushalt_data_query_batch_finished',
+        'page arguments' => array(2),
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['data/ogd/dataset/%'] = array(
+        'title' => 'query',
+        'page callback' => 'offenerhaushalt_data_ogd_show_dataset',
+        'page arguments' => array(3),
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['data/ogd/dataset'] = array(
+        'title' => 'query',
+        'page callback' => 'offenerhaushalt_data_ogd_list_datasets',
+        'page arguments' => array(2),
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['data/download/bulk/%'] = array(
+        'title' => 'query',
+        'page callback' => 'offenerhaushalt_data_download_bulk',
+        'page arguments' => array(3),
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['data/download/%'] = array(
+        'title' => 'query',
+        'page callback' => 'offenerhaushalt_data_download_dataset',
+        'page arguments' => array(2),
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    // ADMIN CONF
+    // -----------------------------------------------------------------------------------------------------------------
+    $items['admin/config/offenerhaushalt_data'] = array(
+        'title' => 'Modul data.offenerhaushalt',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('offenerhaushalt_data_admin_settings_form'),
+        'access arguments' => array('administer_offenerhaushalt'),
+        'type' => MENU_CALLBACK,
+        'file' => 'offenerhaushalt_data_admin.inc',
+    );
+    $items['admin/config/offenerhaushalt_data/settings'] = array(
+        'title' => 'Einstellungen',
+        'type' => MENU_DEFAULT_LOCAL_TASK,
+        'weight' => -10,
+    );
+    $items['admin/config/offenerhaushalt_data/update-metadata'] = array(
+        'title' => 'Metadaten aktualisieren',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('offenerhaushalt_data_admin_update_metadata_form'),
+        'access arguments' => array('administer_offenerhaushalt'),
+        'type' => MENU_LOCAL_TASK,
+        'weight' => 10,
+        'file' => 'offenerhaushalt_data_admin.inc',
+    );
+    $items['admin/config/offenerhaushalt_data/constants'] = array(
+        'title' => 'Fix-Texte',
+        'page callback' => 'drupal_get_form',
+        'page arguments' =>  array('offenerhaushalt_data_admin_constants'),
+        'access arguments' => array('administer_offenerhaushalt'),
+        'type' => MENU_LOCAL_TASK,
+        'file' => 'offenerhaushalt_data_admin.inc',
+        'weight' => 20
+    );
+
+    return $items;
+}
+
+/**
+ * Hook Theme
+ *
+ * @return array
+ */
+function offenerhaushalt_data_theme() {
+    return array(
+        'offenerhaushalt_data_view' => array(
+            'path' => drupal_get_path('theme', 'data'),
+            'template' => 'templates/data-form',
+        ),
+        'offenerhaushalt_data_account_request' => array(
+            'path' => drupal_get_path('theme', 'data'),
+            'template' => 'templates/data-account-request-form'
+        ),
+    );
+}
+
+/**
+ *
+ * Main entry point for data.offenerhaushalt.at
+ *
+ */
+function offenerhaushalt_data_controller() {
+    if (!module_exists('offenerhaushalt_data')) {
+        drupal_not_found();
+        return null;
+    }
+
+    $form_data = offenerhaushalt_data_fetch_form_data();
+
+    offenerhaushalt_data_add_scripts_and_styles($form_data);
+
+    return theme('offenerhaushalt_data_view',array(
+        'oh_data' => array('form_data' => $form_data)
+    ));
+}
+
+/**
+ * Download data.
+ *
+ * @param $filename
+ */
+function offenerhaushalt_data_download_bulk($filename) {
+    $filename = preg_replace("/[^A-Za-z0-9_. ]/", '', $filename);
+
+    $path = file_directory_temp() . '/' . $filename;
+
+    if (file_exists($path)) {
+        $zipname = oh_data_simplify_working_directory($filename) . '.zip';
+
+        oh_data_serve_zip($path, $zipname);
+
+        // immediately invoke file removal
+        unlink($path);
+    } else {
+        drupal_not_found();
+    }
+}
+
+/**
+ * @param $dataset_code
+ * @throws Exception
+ */
+function offenerhaushalt_data_download_dataset($dataset_code) {
+    $params = [
+        'format'   => isset($_GET['format']) ? $_GET['format'] : 'csv',
+        'lang'     => isset($_GET['lang'])   ? $_GET['lang']   : 'de',
+        'charset'  => isset($_GET['charset'])? $_GET['charset']: 'utf-8',
+    ];
+
+    $downloader = OHDatasetDownloaderFactory::create($dataset_code,$params['charset'], $params['format'], $params['lang']);
+
+    if ($downloader) {
+        return $downloader->load()->transform()->serve();
+    }
+
+    drupal_not_found();
+    return;
+}
+
+/**
+ * @return null
+ */
+function offenerhaushalt_data_ogd_list_datasets() {
+    // if since time param is provided use it to get only updated datasets since x
+    // else just use a date which is always prior to any updates (= list everything)
+    $sinceTime = DateTime::createFromFormat('Y-m-d', '1970-01-01');
+
+    if (isset($_GET['since_time'])) {
+        $sinceTimeParam = DateTime::createFromFormat('Y-m-d\TH:i:s.u', $_GET['since_time']);
+        if ($sinceTimeParam) {
+            $sinceTime = $sinceTimeParam;
+        }
+    }
+
+    $result = db_select(OHTables::$METADATA_DATASETS, 'd')
+        ->fields('d',['ogd_metadata_identifier'])
+        ->condition('d.updated_at',$sinceTime->getTimestamp(),'>=')
+        ->execute();
+
+    $uuids = $result->fetchCol();
+
+    return oh_data_respond_with_json($uuids);
+}
+
+/**
+ * @param $uuid
+ * @return null|void
+ * @throws Exception
+ */
+function offenerhaushalt_data_ogd_show_dataset($uuid) {
+    $dataset = OHDataset::findByUuid($uuid);
+
+    if (!$dataset) {
+        return drupal_not_found();
+    }
+
+    $constants = new OHMetadataConstants();
+
+    // respond with json
+    return oh_data_respond_with_json($dataset->toOgd($constants));
+}
+
+/**
+ * @param $data
+ * @return null
+ */
+function oh_data_respond_with_json($data) {
+    header('Content-type:application/json;charset=utf-8');
+
+    // respond with json
+    echo json_encode($data, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT);
+
+    return null;
+}
+
+/**
+ * @return null|string|void
+ */
+function offenerhaushalt_data_query_batch_init() {
+    // Limit route to POST requests
+    if (strtoupper($_SERVER['REQUEST_METHOD']) !== 'POST') {
+        drupal_not_found();
+        return;
+    }
+
+    $params = offenerhaushalt_data_transform_query_params();
+
+    if (!oh_data_validate_query($params)) {
+        drupal_set_message('Failed parameter validation.','error');
+        return offenerhaushalt_data_controller();
+    }
+
+    if (!oh_data_check_access_level_against_query_params(oh_data_determine_access_level(), $params)) {
+        drupal_set_message('Insufficient parameters set.','error');
+        return offenerhaushalt_data_controller();
+    }
+
+    $settings = [
+        'blockSize' => 5000,
+        'fileType' => 'csv',
+        'delimiter' => ';',
+        'dir' => file_directory_temp() . '/' . oh_data_working_directory_name(),
+    ];
+
+    oh_data_kickoff_batch($params, oh_data_has_allaccess_role(), $settings);
+}
+
+/**
+ * @param $params
+ * @param $all_access
+ * @param $settings
+ */
+function oh_data_kickoff_batch($params, $all_access, $settings) {
+    $operations = [];
+
+    if ($params['source'] == null || $params['source'] == OFFENERHAUSHALT_DATA_SRC_STA) {
+        $operations[] = [ 'oh_data_batch_process', [
+            OFFENERHAUSHALT_DATA_SRC_STA,
+            $params,
+            $all_access,
+            $settings['dir'] . '/' . 'statistik-austria.csv',
+            $settings
+        ] ];
+    }
+
+    if ($params['source'] == null || $params['source'] == OFFENERHAUSHALT_DATA_SRC_GEM) {
+        $operations[] = [ 'oh_data_batch_process', [
+            OFFENERHAUSHALT_DATA_SRC_GEM,
+            $params,
+            $all_access,
+            $settings['dir'] . '/' . 'gemeinde-ghd.csv',
+            $settings
+        ] ];
+    }
+
+    $operations[] = [ 'oh_data_batch_compress', [ $settings ] ];
+
+    $batch = [
+        'operations'       => $operations,
+        'finished'         => 'oh_data_batch_finished',
+        'title'            => t('data.offenerhaushalt.at'),
+        'init_message'     => t('Starting process...'),
+        'progress_message' => '',
+        'error_message'    => t('An error occured.'),
+        'file'             => drupal_get_path('module', 'offenerhaushalt_data') . '/offenerhaushalt_data_batch.inc',
+    ];
+
+    batch_set($batch);
+
+    $compressedFile = basename($settings['dir']).'.zip';
+
+    batch_process('data/batch-finished'.'/'.$compressedFile); // redirect-to-after-finish
+}
+
+/**
+ * @param $filename
+ * @return string
+ * @throws Exception
+ */
+function offenerhaushalt_data_query_batch_finished($filename) {
+
+    $url = oh_data_download_url($filename);
+
+    if (!file_exists(file_directory_temp() . '/' . $filename)) {
+        //drupal_set_message('Compressed File does not exist');
+        $url = null;
+    }
+
+    offenerhaushalt_data_add_scripts_and_styles();
+
+    return theme('offenerhaushalt_data_view',array(
+        'oh_data' => [ 'download' => [ 'url' => $url ] ],
+    ));
+}
+
+/**
+ * TODO unused?
+ *
+ * @param $code
+ * @return null
+ */
+function oh_data_return_with_error($code) {
+    $response = [
+        'status'  => 'error',
+        'code'    => $code,
+        'message' => t(oh_data_error_message($code)),
+    ];
+
+    echo json_encode($response);
+
+    return null;
+}
+
+/**
+ * TODO unused?
+ *
+ * @param $code
+ * @return string
+ */
+function oh_data_error_message($code) {
+    if ($code == 1001) {
+        return 'Keine Daten vorhanden.';
+    }
+
+    return 'Unknown Error';
+}
+
+/**
+ * TODO unused?
+ *
+ * @param $url
+ * @return null
+ */
+function oh_data_return_with_success($url) {
+    $response = [
+        'status' => 'success',
+        'url' => $url,
+    ];
+
+    echo json_encode($response);
+
+    return null;
+}
+
+/**
+ * @param $source
+ * @param $settings
+ * @return mixed
+ */
+function oh_data_settings_set_destination($source, $settings) {
+    $dest = '';
+
+    if ($source == OFFENERHAUSHALT_DATA_SRC_STA) {
+        $dest = $settings['dir'] . '/' . 'statistik-austria.csv';
+    }
+
+    if ($source == OFFENERHAUSHALT_DATA_SRC_GEM) {
+        $dest = $settings['dir'] . '/' . 'gemeinde-ghd.csv';
+    }
+
+    if ($dest) {
+        $settings['destination'] = $dest;
+    }
+
+    return $settings;
+}
+
+/**
+ * @return array
+ */
+function oh_data_get_headings() {
+    return [
+        'gkz',
+        'jahr',
+        'haushaltskonto-hinweis',
+        'haushaltskonto-hinweis-name',
+        'haushaltskonto-ansatz',
+        'ansatzbezeichnung',
+        'haushaltskonto-post',
+        'kontenbezeichnung',
+        'soll-rj'
+    ];
+}
+
+/**
+ * Get the working directory name for the current data request
+ *
+ * @param $includeSessionId
+ *
+ * @return string name of the working directory
+ */
+function oh_data_working_directory_name($includeSessionId = true, $includeRand = true) {
+    $segments = [
+        'offenerhaushalt',
+        'data',
+        $_SERVER['REQUEST_TIME'],
+    ];
+
+    if ($includeSessionId) {
+        $segments[] = strtolower(substr(preg_replace("#([^0-9a-f]+)#i","",session_id()),0,10));
+    }
+
+    if ($includeRand) {
+        $segments[] = substr(md5(drupal_random_bytes(32)),0,10);
+    }
+
+    return join('_',$segments);
+}
+
+/**
+ * Simplified directory name is used for name/paths of the final compressed file
+ *
+ * @param $dir
+ * @return string
+ */
+function oh_data_simplify_working_directory($dir) {
+    $arr = explode('_',$dir);
+
+    return $arr[0] . '_' . $arr[1] . '_' . $arr[2];
+}
+
+/**
+ * @param $file
+ * @return string
+ */
+function oh_data_download_url($file) {
+    return $file ? $GLOBALS['base_url'] . '/data/download/bulk/' . $file : '';
+}
+
+/**
+ * @param $destination
+ * @param $data
+ * @param null $headings
+ * @param string $mode
+ * @param string $delimiter
+ */
+function oh_data_write_csv($destination, $data, $headings = null, $mode = 'w', $delimiter = ';') {
+    // create file at destination
+    $fp = fopen($destination, $mode);
+
+    // add a header row (?)
+    if ($headings) {
+        fputcsv($fp, $headings, $delimiter);
+    }
+
+    // Loop over data and write each row
+    foreach ($data as $row) {
+        fputcsv($fp, array_values($row), $delimiter);
+    }
+
+    // Close the output stream.
+    fclose($fp);
+}
+
+/**
+ * @param $files
+ * @param $dir
+ * @param bool|false $removeSource
+ * @return string
+ */
+function oh_data_compress_files($files, $dir, $removeSource = false) {
+    $zip = new ZipArchive();
+    $filename = basename($dir).'.zip';
+    $zip->open(file_directory_temp() . '/' . $filename, ZipArchive::CREATE);
+
+    foreach($files as $file) {
+        $zip->addFile($file, oh_data_simplify_working_directory(basename($dir)) . '/' . basename($file));
+    }
+
+    $zip->close();
+
+    // cleanup
+    if ($removeSource) {
+        foreach($files as $file) {
+            unlink($file);
+        }
+        rmdir($dir);
+    }
+
+    return $filename;
+}
+
+/**
+ * Serve a zip file.
+ *
+ * @param $source
+ * @param $filename
+ */
+function oh_data_serve_zip($source, $filename) {
+    // download it
+    header("Content-type: application/zip");
+    header("Content-Disposition: attachment; filename=$filename");
+    header("Content-length: " . filesize($source));
+    header("Pragma: no-cache");
+    header("Expires: 0");
+    readfile("$source");
+}
+
+/**
+ * @return array
+ */
+function offenerhaushalt_data_transform_query_params() {
+    $params = [
+        'year_from' => null,
+        'year_to'   => null,
+        'state'     => null,
+        'ewk'       => null,
+        'ansl'      => null,
+        'ans'       => null,
+        'en'        => null,
+        'source'    => null,
+        'lang'      => 'de'
+    ];
+
+    oh_data_set_data_param($params, 'year_from');
+    oh_data_set_data_param($params, 'year_to');
+    oh_data_set_data_param($params, 'state');
+    oh_data_set_data_param($params, 'ewk');
+    oh_data_set_data_param($params, 'ansl');
+    oh_data_set_data_param($params, 'en');
+    oh_data_set_data_param($params, 'source');
+    oh_data_set_data_param($params, 'lang');
+
+    if ($params['ansl'] == 1) {
+        oh_data_set_data_param($params, 'ansl1', 'ans');
+    }
+    if ($params['ansl'] == 2) {
+        oh_data_set_data_param($params, 'ansl2', 'ans');
+    }
+    if ($params['ansl'] == 3) {
+        oh_data_set_data_param($params, 'ansl3', 'ans');
+    }
+
+    return $params;
+}
+
+/**
+ * @param $params
+ * @param $fromKey
+ * @param null $toKey
+ */
+function oh_data_set_data_param(&$params, $fromKey, $toKey = null) {
+    if(isset($_POST[$fromKey])) {
+        $value = trim($_POST[$fromKey]);
+
+        if ($value != '' && $value != 'default') {
+            $params[$toKey ? $toKey : $fromKey] = trim($_POST[$fromKey]);
+        }
+    }
+}
+
+/**
+ * Check input sanity
+ */
+function oh_data_validate_query($params) {
+    $valid = true;
+
+    $valid &= $params['year_from'] == null || oh_data_is_param_valid_int($params['year_from']);
+    $valid &= $params['year_to'] == null   || oh_data_is_param_valid_int($params['year_to']);
+    $valid &= $params['state'] == null     || oh_data_is_param_valid_int($params['state']);
+    $valid &= $params['ewk'] == null       || oh_data_is_param_valid_int($params['ewk']);
+    $valid &= $params['ans'] == null       || ($params['ans'] == preg_replace('/[^0-9]/', '', $params['ans']) && strlen($params['ans']) <= 3);
+    $valid &= $params['en'] == null        || (int) $params['en'] === 0 || (int) $params['en'] === 1;
+    $valid &= $params['source'] == null    || in_array($params['source'],[OFFENERHAUSHALT_DATA_SRC_STA,OFFENERHAUSHALT_DATA_SRC_GEM]);
+    $valid &= $params['lang'] == null      || in_array($params['lang'], [ 'de','en' ]);
+
+    return $valid;
+}
+
+/**
+ * @param $value
+ * @return bool
+ */
+function oh_data_is_param_valid_int($value) {
+    return ctype_digit($value) && (int) $value > 0;
+}
+
+/**
+ * @param $accessLevel
+ * @param $params
+ * @return bool
+ */
+function oh_data_check_access_level_against_query_params($accessLevel, $params) {
+
+    // count number of main filters user provided
+    $count = 0;
+
+    if ($params['year_from'] != null && $params['year_to'] != null) {
+        $count++;
+    }
+
+    if ($params['state'] != null) {
+        $count++;
+    }
+
+    if ($params['ewk'] != null) {
+        $count++;
+    }
+
+    if ($params['ans'] != null) {
+        $count++;
+    }
+
+    return $count >= $accessLevel;
+}
+
+/**
+ * @param $params
+ * @param $raw
+ * @return array|null
+ */
+function oh_data_transform_result($params, $raw) {
+    $result = [];
+
+    while ($row = $raw->fetchAssoc()) {
+        // process row data
+        // change the values decimal seperator from '.' to ','
+        $row['soll'] = str_replace('.', ',', $row['soll']);
+
+        // assign row to final output array
+        $result[] = $row;
+    }
+
+    return count($result) > 0 ? $result : null;
+}
+
+/**
+ * @return array
+ */
+function offenerhaushalt_data_fetch_form_data() {
+    global $language;
+
+    $data = [];
+
+    // 1. fetch years
+    $availableYears = oh_get_available_years_global();
+
+    // 2. fetch states
+    $availableStates = offenerhaushalt_get_bundesland(null,true);
+
+    // 3. fetch ewk
+    $availablePopulationClasses = offenerhaushalt_get_einwohnerklassen();
+
+    // 4. fetch political classification
+    $ansAll = oh_data_transform_ans3_for_select2(offenerhaushalt_get_ans3(null, true));
+
+    // 5. get access level
+    $accessLevel = oh_data_determine_access_level();
+
+    // ajax url
+    $dataRequestUrl = 'data/query';
+
+    $data['available_years']  = $availableYears;
+    $data['available_states'] = $availableStates;
+    $data['available_ewks']   = $availablePopulationClasses;
+    $data['available_ans']    = $ansAll;
+    $data['access_level']     = $accessLevel;
+    $data['data_request_url'] = $dataRequestUrl;
+    $data['lang']             = $language->language;
+
+    return $data;
+}
+
+/**
+ * @return int
+ */
+function oh_data_determine_access_level() {
+    global $user;
+
+    // not authenticated? basic access
+    if (!$user) {
+        return OFFENERHAUSHALT_DATA_ACCESS_ANONYMOUS;
+    }
+
+    // premium access?
+    $premium    = user_role_load_by_name(OFFENERHAUSHALT_DATA_ROLE_PREMIUM);
+    if (isset($user->roles[$premium->rid])) {
+        return OFFENERHAUSHALT_DATA_ACCESS_PREMIUM;
+    }
+
+    // registered access?
+    $registered = user_role_load_by_name(OFFENERHAUSHALT_DATA_ROLE_REGISTERED);
+    if (isset($user->roles[$registered->rid])) {
+        return OFFENERHAUSHALT_DATA_ACCESS_REGISTERED;
+    }
+
+    // authenticated user, but no further data access
+    return OFFENERHAUSHALT_DATA_ACCESS_ANONYMOUS;
+}
+
+/**
+ * @return bool
+ */
+function oh_data_has_allaccess_role() {
+    global $user;
+
+    if ($user) {
+        $all = user_role_load_by_name(OFFENERHAUSHALT_DATA_ROLE_ALLACCESS);
+        if (isset($user->roles[$all->rid])) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/**
+ * @param $data
+ * @return array
+ */
+function oh_data_transform_ans3_for_select2($data) {
+    $ansAllJs = array();
+
+    // prepare ans3l1 datastructure for select2 javascript typeahead/search
+    foreach ($data as $ans) {
+
+        $len = strlen($ans['ans3id']);
+
+        if ($len == 1) {
+            $ansAllJs['ansl1'][] = array('id' => $ans['ans3id'], 'text' => $ans['ans3id'] . ' ' . $ans['name']);
+        }
+        if ($len == 2) {
+            $ansAllJs['ansl2'][] = array('id' => $ans['ans3id'], 'text' => $ans['ans3id'] . ' ' . $ans['name']);
+        }
+        if ($len == 3) {
+            $ansAllJs['ansl3'][] = array('id' => $ans['ans3id'], 'text' => $ans['ans3id'] . ' ' . $ans['name']);
+        }
+    }
+
+    return $ansAllJs;
+}
+
+/**
+ * @param null $data
+ */
+function offenerhaushalt_data_add_scripts_and_styles($data = null) {
+    drupal_add_css(drupal_get_path('theme', 'data') . '/css/styles.css');
+    drupal_add_css(drupal_get_path('theme', 'offenerhaushalt') . '/css/select2.css');
+
+    drupal_add_js(drupal_get_path('theme', 'offenerhaushalt') . '/js/select2.min.js');
+    drupal_add_js(drupal_get_path('theme', 'data') . '/js/form.js', array('scope' => 'footer'));
+
+    // settings
+    drupal_add_js(array('offenerhaushalt' => array('base_url' => $GLOBALS['base_url'])), array('type' => 'setting'));
+
+    if ($data) {
+        drupal_add_js(array('offenerhaushalt' => array('data_request_url' => $data['data_request_url'])), array('type' => 'setting'));
+        drupal_add_js(array('offenerhaushalt' => array('data_access_level' => $data['access_level'])), array('type' => 'setting'));
+        drupal_add_js(array('offenerhaushalt' => array('lang' => $data['lang'])), array('type' => 'setting'));
+
+        if (isset($data['available_ans'])) {
+            drupal_add_js(array('offenerhaushalt' => array('available_ans' => $data['available_ans'])), array('type' => 'setting'));
+        }
+        if (isset($data['available_years'])) {
+            drupal_add_js(array('offenerhaushalt' => array('available_years' => $data['available_years'])), array('type' => 'setting'));
+        }
+    }
+}
+
+/**
+ * @param $source
+ * @param $params
+ */
+function oh_data_test_count_records($source, $params) {
+    $count = offenerhaushalt_finance_query($source, $params, 0, 1, true)->fetchField();
+
+    echo("$source: $count");
+}
+
+/**
+ * Source: http://stackoverflow.com/questions/2040240/php-function-to-generate-v4-uuid
+ *
+ * @return string
+ */
+function offenerhaushalt_data_generate_uuid() {
+    $data = openssl_random_pseudo_bytes(16);
+
+    assert(strlen($data) == 16);
+
+    $data[6] = chr(ord($data[6]) & 0x0f | 0x40); // set version to 0100
+    $data[8] = chr(ord($data[8]) & 0x3f | 0x80); // set bits 6-7 to 10
+
+    return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
+}
+
+/**
+ * @return string
+ * @throws Exception
+ */
+function offenerhaushalt_data_account_request() {
+    offenerhaushalt_data_add_scripts_and_styles();
+
+    if (isset($_GET['name'])) {
+        $oldInput = [
+            'name'         => isset($_GET['name']) ? $_GET['name'] : null,
+            'email'        => isset($_GET['email']) ? $_GET['email'] : null,
+            'organization' => isset($_GET['organization']) ? $_GET['organization'] : null,
+            'comment'      => isset($_GET['comment']) ? substr($_GET['comment'], 0, 500) : null,
+        ];
+    }
+
+    return theme('offenerhaushalt_data_account_request',[
+        'oldInput' => isset($oldInput) ? $oldInput : null,
+    ]);
+}
+
+/**
+ * @param $data
+ * @return bool
+ */
+function offenerhaushalt_data_account_request_validate($data) {
+    $valid = true;
+
+    if (!isset($data['name']) || trim($data['name']) == '') {
+        drupal_set_message(t('Name is a required field.'),'error');
+        $valid = false;
+    }
+
+    if (!isset($data['email']) || trim($data['email']) == '') {
+        drupal_set_message(t('E-Mail is a required field.'),'error');
+        $valid = false;
+    }
+
+    if (isset($data['email']) && trim($data['email']) != '' && !valid_email_address($data['email'])) {
+        drupal_set_message(t('The provided email address is not valid: %email', [ '%email' => $data['email'] ]),'error');
+        $valid = false;
+    }
+
+    if (!isset($data['comment']) || trim($data['comment']) == '') {
+        drupal_set_message(t('Comment is a required field.'),'error');
+        $valid = false;
+    }
+
+    // check receiver setting
+    if (!variable_get('offenerhaushalt_data_user_request_receiver',null)) {
+        drupal_set_message('Bei der Verarbeitung ist ein Fehler aufgetreten. Bitte versuchen Sie es zu einem späteren Zeitpunkt noch einmal.');
+        $valid = false;
+    }
+
+    return $valid;
+}
+
+/**
+ *
+ */
+function offenerhaushalt_data_account_request_submit() {
+    // Limit route to POST requests
+    if (strtoupper($_SERVER['REQUEST_METHOD']) !== 'POST') {
+        drupal_not_found();
+        return;
+    }
+
+    $params = [
+        'name'         => isset($_POST['name']) ? $_POST['name'] : null,
+        'email'        => isset($_POST['email']) ? $_POST['email'] : null,
+        'organization' => isset($_POST['organization']) ? $_POST['organization'] : null,
+        'comment'      => isset($_POST['comment']) ? substr($_POST['comment'], 0, 500) : null,
+    ];
+
+    // check required fields
+    if (!offenerhaushalt_data_account_request_validate($params)) {
+        // send back with errors and old input
+        drupal_goto($GLOBALS['base_url'] . '/data/account-request',[ 'query' => $params ]);
+        return;
+    }
+
+    drupal_mail('offenerhaushalt', 'data-account-request', variable_get('offenerhaushalt_data_user_request_receiver'), language_default(), $params);
+    watchdog('offenerhaushalt_data',
+        "Neuer User-Account-Request. Name: %name, Organisation: %organization, Email: %email, Kommentar: %comment",
+        [
+            '%name' => $params['name'],
+            '%organization' => $params['organization'],
+            '%email' => $params['email'],
+            '%comment' => $params['comment']
+        ],
+        WATCHDOG_INFO);
+
+    drupal_set_message('Die Anfrage wurde gesendet.');
+    drupal_goto($GLOBALS['base_url'] . '/data/account-request');
+}
+
+/**
+ * @param $data
+ * @param $key
+ * @return string
+ */
+function oh_data_old($data, $key) {
+    if (isset($data) && isset($data[$key])) {
+        return $data[$key];
+    }
+
+    return '';
+}
+
+/**
+ * @param $params
+ * @return array
+ */
+function offenerhaushalt_data_get_account_request_email($params) {
+    $name = $params['name'];
+    $organization = $params['organization'];
+    $email = $params['email'];
+    $comment = $params['comment'];
+
+    $data = [];
+    $data['subject'] = "data.offenerhaushalt.at Account Request";
+    $data['text'] = "
+    Name: $name,
+    Organisation: $organization,
+    E-Mail: $email,
+
+    Kommentar:
+    $comment";
+
+    return $data;
+}

@@ -1,0 +1,20 @@
+core = "7.x"
+description = "Erweiterungsmodul data.offenerhaushalt"
+name = "data.offenerhaushalt"
+
+dependencies[] = offenerhaushalt
+dependencies[] = offenerhaushalt_va
+
+files[] = offenerhaushalt_data_metadata_constants.inc
+files[] = offenerhaushalt_data_metadata_dataset.inc
+files[] = offenerhaushalt_data_dataset_downloader.inc
+files[] = offenerhaushalt_data_dataset_downloader_factory.inc
+
+files[] = downloaders/statistikaustria_rechnungsabschluss.inc
+files[] = downloaders/gemeinde_rechnungsabschluss.inc
+files[] = downloaders/gemeinde_voranschlag.inc
+
+package = "Offener Haushalt"
+php = "5.3"
+version = "7.x-1.0"
+configure = admin/config/offenerhaushalt_data
